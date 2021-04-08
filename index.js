@@ -6,3 +6,9 @@ fs.readFile("./texto.txt", { encoding: "utf-8" }, (erro, daddos) => {
     console.log(daddos);
   }
 });
+
+fs.writeFile("./texto.txt", "Novo conteudo", (erro) => {
+  if (erro) {
+    console.log(erro.message);
+  }
+});
