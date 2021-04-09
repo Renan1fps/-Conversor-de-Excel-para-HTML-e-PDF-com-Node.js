@@ -2,8 +2,10 @@ const Reader = require("./Reader");
 const Processor = require("./Processor");
 const Table = require("./Table");
 const HtmlParser = require("./HtmlParser");
+const Writer = require("./Writer");
 
 var leitor = new Reader();
+var writer = new Writer();
 
 async function main() {
   var data = await leitor.Read("./users.csv");
@@ -12,7 +14,7 @@ async function main() {
   var users = new Table(dataProcess);
   var html = await HtmlParser.Parser(users);
 
-  console.log(html);
+  writer.Write(Date.now()+".html", html);
 }
 
 main();
