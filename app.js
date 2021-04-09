@@ -10,6 +10,8 @@ async function main() {
 
   var usuarios = new Table(dataProcess);
   console.log(usuarios.header);
+  console.log(usuarios.RowCount);
+  console.log(usuarios.ColunsCount);
 }
 
 main();
