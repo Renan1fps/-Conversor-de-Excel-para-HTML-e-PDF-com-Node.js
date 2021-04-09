@@ -3,10 +3,10 @@ class Processor {
     var splitData = data.split("\r\n");
     var rows = [];
     splitData.forEach((row) => {
-    var arrayResult= row.split(",");
-    rows.push(arrayResult)
+      var arrayResult = row.split(",");
+      rows.push(arrayResult);
     });
-    console.log(rows)
+    return rows;
   }
 }
 
